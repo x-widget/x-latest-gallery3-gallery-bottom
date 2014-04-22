@@ -23,8 +23,8 @@ $list = g::posts( array(
 		if ( empty($img) ) {
 			$_wr_content = db::result("SELECT wr_content FROM $g5[write_prefix]$_bo_table WHERE wr_id='$_wr_id'");
 			$image_from_tag = g::thumbnail_from_image_tag( $_wr_content, $_bo_table, $gallery_info[1][$i], $gallery_info[2][$i] );
-			if ( empty($image_from_tag) ) $img = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/img/no-image.png'/>", $_bo_table, $gallery_info[1][$i], $gallery_info[2][$i]);
-			else $img = $image_from_tag;
+			if ( empty($image_from_tag) ) $image_from_tag = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/img/no-image.png'/>", $_bo_table, $gallery_info[1][$i], $gallery_info[2][$i]);
+			$img = $image_from_tag;
 		}
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
