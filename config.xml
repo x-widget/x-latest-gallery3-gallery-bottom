@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+	<id>widget x-latest-gallery3-gallery-bottom</id>
+	<type>widget</type>
+	<category>
+		<main>post</main>
+		<sub>latest</sub>
+	</category>
+	<name>
+		<en>Latest Gallery Posts with Large Thumbnail</en>
+		<ko>Latest Gallery Posts with Large Thumbnail</ko>
+	</name>
+	<version>0.1</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky@gmail.com</email>
+	<homepage>http://jaehosong.com</homepage>
+	<demo>http://philgo.net</demo>
+	<short>
+		<en>Displays latest post with large thumbnail.</en>
+		<ko>Displays latest post with large thumbnail.</ko>
+	</short>
+	<detail>
+		<en>Displays latest post with thumbnail and post information.</en>
+		<ko>Displays latest post with thumbnail and post information.</ko>
+	</detail>
+</config>
