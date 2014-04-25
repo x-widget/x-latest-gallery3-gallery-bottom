@@ -1,8 +1,31 @@
+.bottom-left {
+	width: 35%;
+}
+
+.bottom-middle {
+	width: 30%;
+} 
+
+.bottom-right {
+	width: 35%;
+}
+
+.bottom-left .inner{
+	margin-right:3px;
+}
+
+.bottom-middle .inner {
+	margin:0 2px;
+} 
+
+.bottom-right .inner {
+	margin-left:3px;
+}
+
 .bottom-left, .bottom-middle, .bottom-right {
 	float: left;
-	position: relative;
-	word-break:break-all;
-	overflow:hidden;
+	position: relative;	
+	word-break:break-all;	
 }
 
 .bottom-left a, .bottom-middle a, .bottom-right a {
@@ -10,9 +33,13 @@
 	text-decoration: none;	
 }
 
+.bottom-left .inner, .bottom-middle .inner, .bottom-right .inner {
+	border: solid 1px #c0c0c0;
+	overflow:hidden;
+}
+
 .bottom-left img, .bottom-middle img, .bottom-right img {
-	width: 100%;
-	border: solid 1px #c0c0c0;	
+	width: 100%;	
 }
 
 .bottom-left-container, .bottom-middle-container, .bottom-right-container {

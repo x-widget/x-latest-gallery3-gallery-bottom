@@ -15,7 +15,7 @@ $list = g::posts( array(
 	
 	<?		
 	if ( $list ) {
-		$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(336, 282, 336), array(225, 224, 225));
+		$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(334, 282, 334), array(225, 224, 225));
 	for ($i = 0; $i<=2; $i++ ) {
 		$_wr_id = $list[$i]['wr_id'];
 		$imgsrc = x::post_thumbnail($_bo_table, $_wr_id, $gallery_info[1][$i], $gallery_info[2][$i]);
