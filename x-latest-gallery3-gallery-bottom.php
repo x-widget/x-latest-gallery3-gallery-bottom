@@ -14,8 +14,8 @@ $list = g::posts( array(
 <div class='latest-bottom-gallery'>
 	
 	<?		
-	if ( $list ) {
-		$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(334, 282, 334), array(225, 224, 225));
+	$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(334, 282, 334), array(225, 224, 225));
+	if ( $list ) {		
 	for ($i = 0; $i<=2; $i++ ) {
 		$_wr_id = $list[$i]['wr_id'];
 		$imgsrc = x::post_thumbnail($_bo_table, $_wr_id, $gallery_info[1][$i], $gallery_info[2][$i]);
@@ -30,11 +30,12 @@ $list = g::posts( array(
 	} 
 		echo "<div style='clear: left'></div>";
 	} else {
-		echo "
-				<div class = 'no_posts'>
-					<img src='".x::url()."/widget/$widget_config[name]/img/no_image_banner.png' />
-				</div>
-			";
+		for ($i = 0; $i<=2; $i++ ) {
+			$_wr_id = $list[$i]['wr_id'];
+			$no_imgsrc = array( $widget_config['url']."/img/left_right_no-image.png", $widget_config['url']."/img/middle_no-image.png"  ,$widget_config['url']."/img/left_right_no-image.png");
+			echo latest_bottom_gallery($gallery_info[0][$i],$no_imgsrc[$i],$list,$i);
+			} 
+			echo "<div style='clear: left'></div>";
 	}	
 	?>
 	
